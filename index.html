@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE ALIENS</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <div id="ui">
+      <!-- HUD -->
+      <div id="hud" class="hidden">
+        <div id="missionPanel">
+          <div id="missionTitle">MISSIONS</div>
+          <div id="missionList"></div>
+          <div id="objective"></div>
+        </div>
+        <div id="suspicionPanel">
+          <div id="suspicionLabel">SUSPICION</div>
+          <div id="suspicionBar"><div id="suspicionFill"></div></div>
+        </div>
+        <div id="abilities">
+          <div class="ability" id="abQ"><b>Q</b> Disguise</div>
+          <div class="ability" id="abF"><b>F</b> Pulse</div>
+          <div class="ability" id="abC"><b>C</b> Camo</div>
+        </div>
+        <div id="toast"></div>
+        <div id="prompt" class="hidden"></div>
+      </div>
+
+      <!-- Title screen -->
+      <div id="titleScreen" class="screen">
+        <div class="titleCard">
+          <div id="plumbobArt"></div>
+          <h1>THE ALIENS</h1>
+          <p class="tagline">Blend in. Help out. Don't get probed.</p>
+          <button id="btnPlay" class="btn big">PLAY</button>
+          <div class="controlsGrid">
+            <span>WASD / Arrows</span><span>Move</span>
+            <span>Mouse</span><span>Look</span>
+            <span>Shift</span><span>Sprint</span>
+            <span>Space</span><span>Jump</span>
+            <span>E</span><span>Interact</span>
+            <span>Q</span><span>Human disguise</span>
+            <span>F</span><span>Alien pulse</span>
+            <span>C</span><span>Camouflage</span>
+            <span>Esc</span><span>Pause</span>
+          </div>
+          <p class="fine">You are a friendly alien in a small town. Help people —<br/>just don't let the capture unit see the real you.</p>
+        </div>
+      </div>
+
+      <!-- Pause -->
+      <div id="pauseScreen" class="screen hidden">
+        <div class="menuCard">
+          <h2>PAUSED</h2>
+          <button id="btnResume" class="btn">RESUME</button>
+          <button id="btnControls" class="btn ghost">CONTROLS</button>
+          <button id="btnRestart" class="btn ghost">RESTART</button>
+        </div>
+      </div>
+
+      <!-- Win / Loss -->
+      <div id="winScreen" class="screen hidden">
+        <div class="menuCard">
+          <h2 class="green">YOU BELONG 🛸</h2>
+          <p>All three missions done. The town knows you as<br/><b>the weird neighbour who helps</b> — exactly as planned.</p>
+          <button id="btnWinRestart" class="btn">PLAY AGAIN</button>
+        </div>
+      </div>
+      <div id="lossScreen" class="screen hidden">
+        <div class="menuCard">
+          <h2 class="red">CAPTURED!</h2>
+          <p>The capture unit bagged you like rare space junk.<br/>Every friendship almost happened...</p>
+          <button id="btnLossRestart" class="btn">TRY AGAIN</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
